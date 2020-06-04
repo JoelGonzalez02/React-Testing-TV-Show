@@ -1,12 +1,12 @@
 import React from "react";
 import { render, fireEvent, waitFor } from "@testing-library/react";
-import { fetchShow } from "./api/fetchShow";
+import { fetchShow as mockFetchShow } from "./api/fetchShow";
 import App from "./App";
 
 //create mock *before* setting up test
 jest.mock("./api/fetchShow");
 
-const mockFetchShow = fetchShow;
+
 
 const mockData = {
     data: {
